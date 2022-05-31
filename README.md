@@ -69,7 +69,7 @@ measurements = 50                      # Total number of sensor measurements
 
 # Blocking radius | Put 0 if you do not want to block. Ranges from 0 to 128. | Indicate min 1 even if you use your own image
 # Might have error if the value is too high as there are no locations to place the sensors. (ie. dont block the whole map)
-blocking_radius = 0
+blocking_radius = 1
 ```
 
 Click :arrow_forward: **Run All** and scroll to the bottom to see the results.
