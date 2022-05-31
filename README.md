@@ -74,7 +74,7 @@ blocking_radius = 0
 
 Click :arrow_forward: **Run All** and scroll to the bottom to see the results.
 
-[readmeimages\demo_image.png](https://github.com/thekopiman/REUNET/blob/master/readmeimages/demo_image.png)
+![Demo Image](https://github.com/thekopiman/REUNET/blob/master/readmeimages/demo_image.png)
 
 ```bash
 MSE Results:
