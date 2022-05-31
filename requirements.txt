@@ -1,4 +1,3 @@
-skimage
 torch
 torchvision
 cv2
