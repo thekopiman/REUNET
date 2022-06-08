@@ -94,7 +94,7 @@ Please check the documentations for an indepth explanation of other parameters.
 
 # Training
 
-Due to the multitude of ways to conduct Transfer Learning, having a blanket template for training in this case is impractical. As such, I will briefly outline 3 main steps for Training - DataLoader, Model Load and Train Model.
+Due to the multitude of ways to conduct Transfer Learning, having a blanket template for training in this case is impractical. As such, I will briefly outline 3 main steps for Training - DataLoader, Model Load and Train Model. I added a sample training jupyter notebook in this respository - `train-n-test.ipynb`. You may use this jupyter notebook for reference when creating your custom training parameters.
 
 ## DataLoader
 
