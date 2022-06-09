@@ -33,7 +33,7 @@ Ensure that the files are in this structure:
 - reunet_demo.ipynb
 - REUNET.py
 
-Keep in mind that `models` and `REUNETData` are not in this Github directory.
+Keep in mind that `Models` and `REUNETData` are not in this Github directory.
 
 # Demo
 
@@ -69,32 +69,32 @@ measurements = 50                      # Total number of sensor measurements
 
 # Blocking radius | Put 0 if you do not want to block. Ranges from 0 to 128. | Indicate min 1 even if you use your own image
 # Might have error if the value is too high as there are no locations to place the sensors. (ie. dont block the whole map)
-blocking_radius = 1
+blocking_radius = 0
 ```
 
 Click :arrow_forward: **Run All** and scroll to the bottom to see the results.
 
-![Demo Image](https://github.com/thekopiman/REUNET/blob/master/readmeimages/demo_image.png)
+![Demo Image](readmeimages\demo_image.png)
 
 ```bash
 MSE Results:
-REUNET - 38.220736036982466
-Kriging - 64.41004288667834
+REUNET - 39.10242374641288
+Kriging - 71.27807225243905
 
 SSIM Results:
-REUNET - 0.8566043604943704
-Kriging - 0.43401914285262627
+REUNET - 0.8654114954167863
+Kriging - 0.37974226033858455
 
 Time Results:
-REUNET - 0.6126328999999977
-Kriging - 0.16030620000000084
+REUNET - 0.8382966999999972
+Kriging - 0.20946469999999806
 ```
 
 Please check the documentations for an indepth explanation of other parameters.
 
 # Training
 
-Due to the multitude of ways to conduct Transfer Learning, having a blanket template for training in this case is impractical. As such, I will briefly outline 3 main steps for Training - DataLoader, Model Load and Train Model. I added a sample training jupyter notebook in this respository - `train-n-test.ipynb`. You may use this jupyter notebook for reference when creating your custom training parameters.
+Due to the amount number of ways to conduct Transfer Learning, having a blanket template for training in this case is impractical. As such, I will briefly outline 3 main steps for Training - DataLoader, Model Load and Train Model. I added a sample training jupyter notebook in this respository - `train-n-test.ipynb`. You may use this jupyter notebook for reference when creating your custom training parameters.
 
 ## DataLoader
 
@@ -119,7 +119,7 @@ dataloaders = {
 
 ## Model Load
 
-Secondly, the model has to be loaded in. (You can do this step first if you like to)
+Secondly, the model has to be loaded in. (You can do this step first if you like to) If you like to train from scratch, it is not necessary to load the model (`model.load`) but it is still necessary to initialise it (`model - modules.RadioWNet`).
 
 ```python
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
